@@ -2,7 +2,7 @@
 import streamlit as st
 import requests
 
-BACKEND_URL = "http://localhost:7860"
+BACKEND_URL = "http://backend:7860"
 
 st.title("SuperKart Sales Prediction") #Complete the code to define the title of the app.
 
