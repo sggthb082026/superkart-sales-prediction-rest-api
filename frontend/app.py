@@ -31,17 +31,6 @@ product_data = {
     "Product_Type_Category": Product_Type_Category
 }
 
-"""
-if st.button("Predict", type='primary'):
-    response = requests.post("https://<user_name>-<space_name>.hf.space/v1/predict", json=product_data)    # Complete the code to enter user name and space name to correctly define the endpoint
-    if response.status_code == 200:
-        result = response.json()
-        predicted_sales = result["Sales"]
-        st.write(f"Predicted Product Store Sales Total: ₹{predicted_sales:.2f}")
-    else:
-        st.error("Error in API request")
-"""
-
 if st.button("Predict", type='primary'):
   response = requests.post(f"{BACKEND_URL}/v1/predict", json=input_data.to_dict(orient='records')[0])  # Send data to Flask API
   if response.status_code == 200:

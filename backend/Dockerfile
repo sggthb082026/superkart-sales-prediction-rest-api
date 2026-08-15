@@ -4,7 +4,7 @@ FROM python:3.9-slim
 WORKDIR /app #Complete the code to mention the command in Docker to set the working directory
 
 # Copy all files from the current directory to the container's working directory
-COPY . . #Complete the code to mention the command in Docker to copy the files from the current directory to the container's working directory
+COPY . .
 
 # Install dependencies from the requirements file without using cache to reduce image size
 RUN pip install --no-cache-dir --upgrade -r requirements.txt #Complete the code to mention the command in Docker to install dependencies
