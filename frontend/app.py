@@ -32,7 +32,7 @@ product_data = {
 }
 
 if st.button("Predict", type='primary'):
-  response = requests.post(f"{BACKEND_URL}/v1/predict", json=input_data.to_dict(orient='records')[0])  # Send data to Flask API
+  response = requests.post(f"{BACKEND_URL}/v1/predict", json=product_data)  # Send data to Flask API
   if response.status_code == 200:
       result = response.json()
       predicted_sales = result["Sales"]
